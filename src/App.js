@@ -10,8 +10,8 @@ function App() {
   const numbers = [1,2,3,4,5,6,7,8,9,0]
   return (
     <div className="App">
-      <h1>Username is: {username !== "" ? username : "Guest"}</h1>
       <h1>Username is: {username || "Guest"}</h1>
+
       <h1>{
         isloaded &&
         <>
@@ -22,6 +22,7 @@ function App() {
           <h2>I have {numbers.length} numbers</h2>
         </>}
       </h1>
+
       <button
         onClick={() => {
           console.log("button clicked")
@@ -31,7 +32,6 @@ function App() {
         Change Loaded
       </button>
 
-      <h1>{objectExample.name}</h1>
       <h1>{isloaded ? "Yes" : "No"}</h1>
 
       {isloaded ? <Loaded /> : <Loading />}
